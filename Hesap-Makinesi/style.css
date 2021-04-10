@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.2rem; /* 12px anlamında */
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* sayfanın ortasına konumlandırır üstteki bilgilerle. ve sayfa boyutu ne olursa olsun hep ortada kalır. */
+}
+
+.calculator-input {
+    width: 100%;
+    font-size: 4rem; /* 40px anlamında */
+    height: 70px;
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button {
+    height: 50px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #c4c4c4;
+    background-color: transparent; /* saydam */
+    font-size: 2.5rem; /* 25px  */
+    color: #333;
+
+}
+
+button:hover { /* buton olayları  */
+    background-color: #eaeaea; /* buton üzerine gelindiğinde renk değişim olayı.  */
+}
+.operator {
+    color: #337cac;
+}
+
+.clear {
+    background-color: #f0595f;
+    border-color: #b0353a;
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #f17377;
+}
+
+.equal-sign {
+    background-color: #2e86c0;
+    border-color: #337cac; 
+    color: #fff;
+    height: 100%;
+    grid-area: 2/4/6/5; /* ='in konumunu ayarlar. 2.satır 4.kolondan başlar. bitişi ise 6.satır 5.kolan olarak yaptık ve altında elemanların kalmasını önledik.*/
+}
+
+.equal-sign:hover {
+    background-color: #4e9ed4;
+}
+
+.calculator-keys {
+    display: grid; /* elemanların artık grid düzende yer alacağını söylüyoruz.  */
+    grid-template-columns: repeat(4, 1fr) ; /* grid-template-columns; kolonlara göre nasıl sıralanacak demektir. repeat(4); her satırda 4 eleman olmasını söylüyoruz. 1fr; kalan elemanların yerlerini her bir tanesine eşit oranda dağıt diyoruz. */
+    grid-gap: 20px; /* elemanlar arasında boşluk bırakmaya yarıyor. */
+    padding: 20px; /* elemanların içeride daha iyi konumlanmasını sağlıyoruz. */
+ }
